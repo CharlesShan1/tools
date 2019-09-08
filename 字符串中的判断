@@ -1,0 +1,61 @@
+#include <string.h>
+
+//判断传入字符串中是否有空格，有返回1，没有返回0
+//传入：要判断的字符串char str[]
+//传出：是否有空格（1或0）
+int string_blank_judge(char str[])
+{
+  int lenth = 0;
+  int i=0;
+  lenth = strlen(str);
+  for(i=0;i<lenth;i++)
+  {
+    if(str[i] == ' ') return 1;
+  }
+  return 0;
+}
+
+//判断字符串中是否有某一个字符，有返回1，没有返回0
+//传入：要判断的字符串 char str[],要判断的字符 char a
+//传出：是否有某个字符(1或0)
+int string_sth_judge(char str[],char a)
+{
+  int lenth = 0;
+  int i=0;
+  lenth = strlen(str);
+  for(i=0;i<a;i++)
+  {
+    if(str[i] == a) return 1;
+  }
+  return 0;
+}
+
+//判断字符串中有无数字，无返回1，有返回0
+//传入：要判断的字符串 char str[]
+//传出：是否有数字(1或0)
+int string_number_judge(char str[])
+{
+  int lenth = 0;
+  int i = 0;
+  lenth = strlen(str);
+  for(i=0;i<lenth;i++)
+  {
+    if(str[i] >= '0' && str[i] <= '9') return 0;
+  }
+  return 1；
+}
+
+//判断字符串中有无字母（大写或小写均可），无返回1，有返回0
+//传入：要判断的字符串 char str[]
+//传出：是否有字母(1或0)
+int string_letter_judge(char str[])
+{
+  int lenth = 0;
+  int i = 0;
+  for(i = 0;i<lenth;i++)
+  {
+    if((str[i]<='Z'&&str[i]>='A')||(str[i]<='z'&&str[i]>='a')) return 0;
+  }
+  return 1;
+}
+
